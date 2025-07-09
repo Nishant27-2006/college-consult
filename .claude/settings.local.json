@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(ls:*)",
+      "Bash(yarn add:*)",
+      "Bash(rm:*)",
+      "Bash(npm run dev:*)",
+      "Bash(pkill:*)",
+      "Bash(mv:*)",
+      "Bash(pnpm install:*)",
+      "Bash(cat:*)",
+      "Bash(sed:*)",
+      "Bash(grep:*)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": []
+  }
+}
