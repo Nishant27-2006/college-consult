@@ -29,7 +29,7 @@ export default function TeamPage() {
       {/* Founders Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {/* Ram Sarma */}
             <Card className="border-2 border-slate-200 hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-8 text-white">
@@ -74,6 +74,16 @@ export default function TeamPage() {
                       <p className="font-bold text-slate-900 text-lg">Independent CS Projects Portfolio</p>
                       <p className="text-slate-600">
                         Developed a strong portfolio of personal projects showcasing technical expertise and a focus on innovation in food allergy research.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <TrendingUp className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-bold text-slate-900 text-lg">Technical Leadership & Innovation</p>
+                      <p className="text-slate-600">
+                        Led multiple software development projects and hackathons, demonstrating strong leadership skills and innovative thinking in technology solutions.
                       </p>
                     </div>
                   </div>
@@ -231,6 +241,75 @@ export default function TeamPage() {
                     "I believe in the power of interdisciplinary thinking and helping students discover how their diverse 
                     interests can create a unique and compelling academic profile. Success comes from authentically 
                     connecting your passions to your goals."
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Hrishi Chintakuntla */}
+            <Card className="border-2 border-slate-200 hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                    <GraduationCap className="h-10 w-10" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold">Hrishi Chintakuntla</h3>
+                    <p className="text-blue-100 text-lg">Medicine Specialist</p>
+                  </div>
+                </div>
+                <Badge className="bg-slate-900 text-white border-0 text-sm px-3 py-1">
+                  Premed @ Johns Hopkins
+                </Badge>
+              </div>
+
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <Trophy className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-bold text-slate-900 text-lg">Johns Hopkins Biology (Ranked #6 Nationally)</p>
+                      <p className="text-slate-600">
+                        Accepted to Johns Hopkins, a prestigious institution known for elite medical school placements.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <Star className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-bold text-slate-900 text-lg">Comprehensive Pre-med Undergraduate Admissions</p>
+                      <p className="text-slate-600">
+                        Acceptances to Baylor University, Case Western Reserve University, Washington University in St. Louis, Emory University, and Dartmouth.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <Award className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-bold text-slate-900 text-lg">Extensive Research Experience</p>
+                      <p className="text-slate-600">
+                        Research paper in stem cell therapy published in Journal of Student Research, Merck research internship in Huntington's Disease, Shadowing/Lab Assistant at University of Texas Southwestern Medical Center, and 2 independent study projects in regenerative medicine and orthopedics respectively.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <TrendingUp className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-bold text-slate-900 text-lg">National Merit Finalist</p>
+                      <p className="text-slate-600">
+                        Achieved a top 1% score in the PSAT and made it through a competitive selection process based on academic excellence to earn a 2.5k scholarship.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-blue-50 rounded-lg">
+                  <h4 className="font-bold text-slate-900 mb-3">Hrishi's Approach</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    "I believe in helping pre-med students build a comprehensive profile that demonstrates both academic excellence and genuine commitment to medicine. My goal is to guide you through the strategic planning needed for medical school success."
                   </p>
                 </div>
               </CardContent>

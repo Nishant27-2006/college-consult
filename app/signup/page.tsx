@@ -11,7 +11,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Mail, Calendar, CheckCircle, Star } from "lucide-react"
+import { ArrowRight, Mail, Calendar, CheckCircle, Star, CreditCard } from "lucide-react"
+import PaymentForm from "@/components/payment-form"
+import CalendlyWidget from "@/components/calendly-widget"
 
 export default function SignupPage() {
   const [formData, setFormData] = useState({
@@ -26,9 +28,10 @@ export default function SignupPage() {
     additionalInfo: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'validation-error'>('idle')
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'validation-error' | 'payment' | 'payment-success'>('idle')
   const [validationErrors, setValidationErrors] = useState<string[]>([])
   const [errorMessage, setErrorMessage] = useState('')
+  const [showPayment, setShowPayment] = useState(false)
 
   const handleInterestChange = (interest: string, checked: boolean) => {
     setFormData((prev) => ({
@@ -117,6 +120,29 @@ export default function SignupPage() {
     } finally {
       setIsSubmitting(false)
     }
+  }
+
+  const handlePaymentSuccess = () => {
+    setSubmitStatus('payment-success')
+    setShowPayment(false)
+    // Reset form after successful payment
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      gradeLevel: "",
+      packageType: "",
+      interests: [],
+      academicGoals: "",
+      hearAbout: "",
+      additionalInfo: "",
+    })
+  }
+
+  const handlePaymentError = (error: string) => {
+    setSubmitStatus('error')
+    setErrorMessage(error)
+    setShowPayment(false)
   }
 
   return (
@@ -366,7 +392,7 @@ export default function SignupPage() {
 
                     {submitStatus === 'success' && (
                       <div className="p-4 bg-green-100 border border-green-300 rounded-lg text-green-800 mb-4">
-                        ✅ Thank you for signing up! We'll contact you within 24 hours to schedule your free consultation and get started.
+                        ✅ Thank you for submitting your information! Please proceed to payment and scheduling below.
                       </div>
                     )}
                     
@@ -381,12 +407,50 @@ export default function SignupPage() {
                       disabled={isSubmitting}
                       className="w-full bg-amber-600 hover:bg-amber-700 disabled:bg-amber-400 text-white font-bold py-3 text-lg rounded-lg"
                     >
-                      {isSubmitting ? 'Submitting...' : 'Sign Up Now'} 
+                      {isSubmitting ? 'Submitting...' : 'Submit Information'} 
                       {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
                     </Button>
                   </form>
                 </CardContent>
               </Card>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Calendly Integration Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Schedule Your Free Consultation</h2>
+              <p className="text-xl text-slate-600">Ready to get started? Pick a time that works best for you and let's discuss your college goals.</p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Calendly Widget */}
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <CalendlyWidget 
+                  url="https://calendly.com/colllegeconsult/30min"
+                  height={700}
+                  minWidth={320}
+                />
+              </div>
+              
+              {/* Payment Form */}
+              <div className="space-y-6">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Complete Your Payment</h3>
+                  <p className="text-slate-600">Secure your consultation package to get started with your college journey.</p>
+                </div>
+                
+                <PaymentForm
+                  formData={formData}
+                  onPaymentSuccess={handlePaymentSuccess}
+                  onPaymentError={handlePaymentError}
+                />
+              </div>
             </div>
           </div>
         </div>

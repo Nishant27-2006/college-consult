@@ -48,6 +48,7 @@ export function Footer() {
             <h4 className="font-semibold text-slate-900 mb-3 text-sm">Contact</h4>
             <ul className="space-y-2 text-slate-600 text-sm">
               <li>colllegeconsult@gmail.com</li>
+              <li>(469) 920-9115</li>
               <li>Free consultation available</li>
             </ul>
           </div>

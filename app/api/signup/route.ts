@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
     // Email content with better formatting
     const mailOptions = {
       from: `"College Consult" <${process.env.EMAIL_USER}>`,
-      to: "ramssarma@gmail.com, nishantg2706@gmail.com, harishbala1325@gmail.com",
+      to: "ramssarma@gmail.com, nishantg2706@gmail.com, harishbala1325@gmail.com, hrishichintakuntla@gmail.com",
       subject: `New College Consult Signup - ${fullName} (${packageDetails})`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -134,7 +134,7 @@ Submitted on: ${new Date().toLocaleString()}
     console.log('Signup email sent: %s', info.messageId)
 
     return NextResponse.json({ 
-      message: 'Signup submitted successfully',
+      message: 'Signup submitted successfully, proceed to schedule a free consultation with the Calendly link below',
       messageId: info.messageId 
     }, { status: 200 })
     
