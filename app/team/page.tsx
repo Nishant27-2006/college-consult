@@ -29,13 +29,13 @@ export default function TeamPage() {
       {/* Founders Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Ram Sarma */}
             <Card className="border-2 border-slate-200 hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-8 text-white">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
-                    <GraduationCap className="h-10 w-10" />
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="/ram.jpg" alt="Ram Sarma" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold">Ram Sarma</h3>
@@ -104,8 +104,8 @@ export default function TeamPage() {
             <Card className="border-2 border-slate-200 hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-r from-amber-600 to-amber-500 p-8 text-white">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
-                    <GraduationCap className="h-10 w-10" />
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="/nishant.jpg" alt="Nishant Gadde" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold">Nishant Gadde</h3>
@@ -250,8 +250,8 @@ export default function TeamPage() {
             <Card className="border-2 border-slate-200 hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
-                    <GraduationCap className="h-10 w-10" />
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center overflow-hidden">
+                    <img src="/hrishi.jpg" alt="Hrishi Chintakuntla" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold">Hrishi Chintakuntla</h3>

@@ -135,7 +135,9 @@ function CheckoutForm({ formData, onPaymentSuccess, onPaymentError }: PaymentFor
           Complete Your Payment
         </CardTitle>
         <div className="text-lg font-semibold text-amber-600">
-          {customerInfo.packageType === 'starter' ? 'Starter Package - $300' : 'Premium Package - $450'}
+          {customerInfo.packageType === 'starter' ? 'Starter Package - $300' : 
+           customerInfo.packageType === 'premium' ? 'Premium Package - $450' :
+           customerInfo.packageType === 'ram-test' ? 'Ram Test - $1' : 'Premium Package - $450'}
         </div>
       </CardHeader>
       <CardContent>
@@ -194,6 +196,7 @@ function CheckoutForm({ formData, onPaymentSuccess, onPaymentError }: PaymentFor
               >
                 <option value="starter">Starter Package - $300 (5 hours)</option>
                 <option value="premium">Premium Package - $450 (10 hours)</option>
+                <option value="ram-test">Ram Test - $1</option>
               </select>
             </div>
           </div>
@@ -210,7 +213,9 @@ function CheckoutForm({ formData, onPaymentSuccess, onPaymentError }: PaymentFor
           <div className="text-sm text-slate-600 bg-slate-50 p-4 rounded-lg">
             <p className="font-semibold mb-2">Payment includes:</p>
             <ul className="space-y-1">
-              <li>• {customerInfo.packageType === 'starter' ? '5 hours' : '10 hours'} of personalized consulting</li>
+              <li>• {customerInfo.packageType === 'starter' ? '5 hours' : 
+                   customerInfo.packageType === 'premium' ? '10 hours' : 
+                   customerInfo.packageType === 'ram-test' ? 'Test package' : '10 hours'} of personalized consulting</li>
               <li>• Free 1-hour initial consultation</li>
               <li>• Exclusive extracurricular network access</li>
               <li>• {customerInfo.packageType === 'premium' ? 'Priority support' : 'Standard support'}</li>

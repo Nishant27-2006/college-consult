@@ -8,6 +8,8 @@ export const getPackagePrice = (packageType: string): number => {
       return 300
     case 'premium':
       return 450
+    case 'ram-test':
+      return 1
     default:
       return 0
   }

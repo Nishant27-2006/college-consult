@@ -142,7 +142,7 @@ export default function ContactPage() {
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <Mail className="h-6 w-6 text-amber-600" />
-                      <span className="text-slate-700">nishantg2706@gmail.com</span>
+                      <span className="text-slate-700">colllegeconsult@gmail.com</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <Calendar className="h-6 w-6 text-amber-600" />

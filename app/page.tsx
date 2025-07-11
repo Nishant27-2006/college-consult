@@ -36,9 +36,9 @@ export default function CollegeConsultPage() {
       <section className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-blue-50 to-amber-50 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-gradient-to-r from-amber-100 to-amber-50 text-amber-800 border-amber-200 px-4 py-2 text-sm font-semibold shadow-sm">
-              🎓 Elite College Admissions Consulting
-            </Badge>
+          <Badge className="mb-6 bg-gradient-to-r from-amber-100 to-amber-50 text-amber-800 border-amber-200 px-4 py-2 text-sm font-semibold shadow-sm">
+            Guaranteed UT Austin Admission
+          </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
               Transform Your College
               <span className="text-amber-600"> Dreams Into Reality</span>

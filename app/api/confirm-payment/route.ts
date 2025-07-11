@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
         <p>3. We'll begin working together to build your path to college success</p>
         
         <h3>Contact Information:</h3>
-        <p>Email: nishantg2706@gmail.com</p>
+        <p>Email: colllegeconsult@gmail.com</p>
         <p>We're here to support you every step of the way!</p>
         
         <p>Best regards,<br>The College Consult Team</p>

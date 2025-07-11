@@ -41,9 +41,17 @@ export async function POST(request: NextRequest) {
     const interestsList = interests.length > 0 ? interests.join(', ') : 'None specified'
 
     // Determine package details
-    const packageDetails = packageType === 'starter' 
-      ? 'Starter Package - $300 (5 hours)' 
-      : 'Premium Package - $450 (10 hours)'
+    let packageDetails
+    if (packageType === 'starter') {
+      packageDetails = 'Starter Package - $300 (5 hours)'
+    } else if (packageType === 'premium') {
+      packageDetails = 'Premium Package - $450 (10 hours)'
+    } else if (packageType === 'ram-test') {
+      packageDetails = 'Ram Test - $1'
+    } else {
+      packageDetails = 'Premium Package - $450 (10 hours)' // default fallback
+    }
+      
 
     // Email content with better formatting
     const mailOptions = {
@@ -138,7 +146,7 @@ Submitted on: ${new Date().toLocaleString()}
       messageId: info.messageId 
     }, { status: 200 })
     
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error sending signup email:', error)
     
     // More specific error messages
